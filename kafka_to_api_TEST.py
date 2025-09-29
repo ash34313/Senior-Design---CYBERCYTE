@@ -1,9 +1,12 @@
-import os, asyncio, json, ssl, random, asyncpg
+import os, asyncio, json, ssl
+import random
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
 from fastapi import FastAPI, HTTPException
 from kafka import KafkaConsumer, KafkaProducer
+import asyncpg
 from dotenv import load_dotenv
+# Removed: from typing import Optional, Dict, Any # Using | None syntax now
 
 # Configure using environment variables for connection security parameters
 load_dotenv()
